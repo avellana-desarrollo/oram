@@ -1,0 +1,421 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+}
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000; /* Color del texto */
+}
+
+/* Estilos para la sección */
+section.relative {
+    position: relative;
+}
+
+/* Estilos para el iframe del video de YouTube */
+.video-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Estilos para el texto blanco */
+.text-white {
+    color: #ffffff;
+}
+
+/* Estilo de la superposición negra */
+.bg-black.opacity-75 {
+    background-color: rgba(0, 0, 0, 0.75); /* Superposición negra con opacidad */
+}
+
+
+
+.gradient-text {
+    background: linear-gradient(110deg, #e71912, #cc1b1b); /* Degradado del color */
+    -webkit-background-clip: text; /* Clipa el fondo al texto en navegadores basados en WebKit */
+    -webkit-text-fill-color: transparent; /* Hace el color del texto transparente para mostrar el fondo */
+    background-clip: text; /* Clipa el fondo al texto en otros navegadores */
+    color: transparent; /* Elimina el color del texto para que solo se vea el degradado */
+}
+
+/* CSS para el footer */
+.footer {
+    background-image: url('../images/inicio/BACKGROUND-1526x546-CONTACTO.png'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del footer */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Establece el color del texto como blanco */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto dentro de los elementos */
+    min-height: 200px; /* Ajusta la altura mínima del footer si es necesario */
+}
+
+.footer h2 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.footer .text-center {
+    margin: 0 auto;
+}
+
+
+.header-transparent {
+    background-color: rgba(255, 255, 255, 0.804);
+}
+
+.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.804);
+}
+
+.bg-overlay {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.section-content {
+    max-width: 80%;
+    margin: auto;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #6E1512, #A52A29); /* Degradado desde #6E1512 a otro color */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #5D1211, #8E2A24); /* Cambiar a un degradado más oscuro en hover */
+}
+
+
+.spacer {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .flex-col {
+        flex-direction: column;
+    }
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    }
+    .mb-0 {
+        margin-bottom: 0;
+    }
+    .spacer {
+        height: 4rem;
+    }
+}
+
+.text-red-600 {
+    color: #E3342F;
+}
+
+.text-large {
+    font-size: 12rem;
+}
+
+/* Asegúrate de que los íconos tengan un fondo blanco */
+.social-icon {
+    display: inline-block;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 50%; /* Hacer el fondo circular si es necesario */
+    padding: 8px; /* Añadir algo de espacio alrededor del ícono */
+}
+
+/* Ajusta el estilo de la imagen dentro del icono */
+.social-image {
+    display: block; /* Asegúrate de que la imagen ocupe el espacio del contenedor */
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    height: 24px; /* Ajusta el tamaño según sea necesario */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(0.6);
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.nav-link.active {
+    color: red;
+}
+
+.custom-img-height {
+    height: 500px;
+    object-fit: cover;
+}
+
+.elementor-widget-video
+.elementor-widget-container {
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.elementor-widget-video
+.elementor-wrapper {
+    aspect-ratio: var(--video-aspect-ratio);
+}
+
+.elementor-widget-video
+.elementor-wrapper iframe, .elementor-widget-video
+.elementor-wrapper video {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: none;
+    background-color: #000;
+}
+
+@supports not (aspect-ratio: 1/1) {
+    .elementor-widget-video
+    .elementor-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: calc(100% / var(--video-aspect-ratio));
+    }
+
+    .elementor-widget-video
+    .elementor-wrapper iframe, .elementor-widget-video
+    .elementor-wrapper video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.elementor-widget-video
+.elementor-open-inline
+.elementor-custom-embed-image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.elementor-widget-video
+.elementor-custom-embed-image-overlay {
+    cursor: pointer;
+    text-align: center;
+}
+
+.elementor-widget-video
+.elementor-custom-embed-image-overlay:hover
+.elementor-custom-embed-play i {
+    opacity: 1;
+}
+
+.elementor-widget-video
+.elementor-custom-embed-image-overlay img {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--video-aspect-ratio);
+    object-fit: cover;
+    object-position: center center;
+}
+
+@supports not (aspect-ratio: 1/1) {
+    .elementor-widget-video
+    .elementor-custom-embed-image-overlay {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: calc(100% / var(--video-aspect-ratio));
+    }
+
+    .elementor-widget-video
+    .elementor-custom-embed-image-overlay img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.elementor-widget-video
+.e-hosted-video
+.elementor-video {
+    object-fit: cover;
+}
+
+.e-con-inner > .elementor-widget-video, .e-con > .elementor-widget-video {
+    width: var(--container-widget-width);
+    --flex-grow: var(--container-widget-flex-grow);
+}
+
+.custom-container {
+    font-family: 'Poppins', sans-serif;
+}
+
+.e-flex .elementor-heading-title a,
+.e-flex .elementor-text-editor a {
+    color: #000;
+    text-decoration: none;
+}
+
+.e-flex .elementor-heading-title a:hover,
+.e-flex .elementor-text-editor a:hover {
+    text-decoration: underline;
+}
+
+.evento {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.evento-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.evento-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 0.875rem;
+}
+
+.evento-text {
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    text-align: left;
+    width: calc(100% - 100px);
+    margin-right: auto;
+}
+
+.evento-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.evento-date {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.btn-ver-evento {
+    display: inline-block;
+    margin-left: auto;
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-ver-evento:hover {
+    background-color: #c53030;
+}
+
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.speaker-container {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.speaker-img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.speaker-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.login-icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.login-section {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.login-section.active, .overlay.active {
+    display: block;
+}
+
+.carousel-custom {
+    height: 500px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    background-size: cover;
+    background-position: center;
+}
