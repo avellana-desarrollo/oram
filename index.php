@@ -900,7 +900,7 @@ $base_de_datos = 'avellan3_oramex'; // Nombre de la base de datos
     
     <div style="margin-top: 75px; display: flex; align-items: center; justify-content: center;">
     
-        <iframe width="75%" height="715px" src="https://www.youtube.com/embed/j3um6EVbn_8?si=d2HuKlCNumnrxojZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="75%" height="715px" src="https://www.youtube.com/watch?v=AbYmRVTfJys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         
     </div>
 </div>
